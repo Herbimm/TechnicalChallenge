@@ -4,8 +4,7 @@ using System.Text.RegularExpressions;
 using TechnicalChallenge.Application.Services;
 using TechnicalChallenge.Domain.Entity;
 using TechnicalChallenge.Domain.Interface;
-using TechnicalChallenge.Infra.Utis;
-
+using TechnicalChallenge.Infra.Data.Utis;
 
 namespace TechnicalChallenge
 {

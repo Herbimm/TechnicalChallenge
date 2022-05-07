@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TechnicalChallenge.Infra.Utis
+namespace TechnicalChallenge.Infra.Data.Utis
 {
     public static class ConsoleListPrint
     {
