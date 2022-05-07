@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using TechnicalChallenge.Domain.Entity;
 using TechnicalChallenge.Domain.Interface;
+using TechnicalChallenge.Infra.Utis;
 using TechnicalChallenge.Service.Implementation;
 
 namespace TechnicalChallenge
@@ -41,14 +42,17 @@ namespace TechnicalChallenge
             #endregion
 
             #region Print Resultado
-
+            ConsoleListPrint.PrintConsoleNumerosDivisiveis(numeroOperacional.Divisores);
+            ConsoleListPrint.PrintConsoleNumerosPrimos(numeroOperacional.Divisores);            
             #endregion
 
         }
 
+        #region DependencyInjection
         public static void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IOperacoesNumericasService, OperacoesNumericasService>();
         }
+        #endregion
     }
 }

@@ -81,15 +81,6 @@ namespace TechnicalChallenge.Service.Implementation
             }
             return numerosInteirosDivididos;
         }
-
-        public string PrintNumerosDivisores(List<int> numeroOperacional)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string PrintNumerosPrimos(List<int> numeroOperacional)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
