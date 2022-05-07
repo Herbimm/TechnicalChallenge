@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace TechnicalChallenge.Api.Controllers
 {
@@ -7,6 +8,10 @@ namespace TechnicalChallenge.Api.Controllers
     [ApiController]
     public class OperacoesNumericasController : ControllerBase
     {
-
+        [HttpGet("primoedivisores{numero}")]
+        public IActionResult VerificaNumeroPrimoEDivisores(decimal numero)
+        {
+            
+        }
     }
 }

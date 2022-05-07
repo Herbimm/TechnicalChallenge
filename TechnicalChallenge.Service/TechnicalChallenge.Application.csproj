@@ -13,4 +13,8 @@
     <ProjectReference Include="..\TechnicalChallenge.Domain\TechnicalChallenge.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="OperacoesNumericas\Commands\" />
+  </ItemGroup>
+
 </Project>
