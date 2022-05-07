@@ -9,7 +9,7 @@ using TechnicalChallenge.Service.Implementation;
 
 namespace TechnicalChallenge
 {
-    internal class Program
+    internal static class Program
     {        
         static void Main(string[] args)
         {
@@ -43,7 +43,7 @@ namespace TechnicalChallenge
 
             #region Print Resultado
             ConsoleListPrint.PrintConsoleNumerosDivisiveis(numeroOperacional.Divisores);
-            ConsoleListPrint.PrintConsoleNumerosPrimos(numeroOperacional.Divisores);            
+            ConsoleListPrint.PrintConsoleNumerosPrimos(numeroOperacional.NumerosPrimos);            
             #endregion
 
         }

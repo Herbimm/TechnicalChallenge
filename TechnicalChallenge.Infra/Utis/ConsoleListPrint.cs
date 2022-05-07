@@ -10,7 +10,6 @@ namespace TechnicalChallenge.Infra.Utis
             var numerosString = String.Join(", ", numerosPrimos);
             Console.WriteLine($"Os Números primos que se encontram no número digitado são : {numerosString}");
         }
-
         public static void PrintConsoleNumerosDivisiveis(List<int> numerosDivisiveis)
         {
             var numerosString = String.Join(", ", numerosDivisiveis);

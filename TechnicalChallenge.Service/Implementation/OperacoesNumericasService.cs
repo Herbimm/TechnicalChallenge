@@ -60,7 +60,7 @@ namespace TechnicalChallenge.Service.Implementation
                         contagemNumerosDivisiveis.Add(i);
                     }                   
                 }   
-                if (contagemNumerosDivisiveis.Count == 2 || contagemNumerosDivisiveis.Count == 1)
+                if (contagemNumerosDivisiveis.Count == 2)
                 {
                     numerosPrimos.Add(item);
                 }
