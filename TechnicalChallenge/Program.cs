@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 using TechnicalChallenge.Domain.Entity;
 using TechnicalChallenge.Domain.Interface;
@@ -33,9 +34,14 @@ namespace TechnicalChallenge
             }
             #endregion
 
-            #region RegraDivisão
+            #region Regra Divisão
             NumeroOperacional numeroOperacional = new NumeroOperacional { Numero = Convert.ToInt32(numeroDigitado)};
-            operacoesNumericasService.VerificarNumeroDivisores(numeroOperacional);
+            numeroOperacional.Divisores = operacoesNumericasService.VerificarNumeroDivisores(numeroOperacional);
+            numeroOperacional.NumerosPrimos = operacoesNumericasService.VerificaNumerosPrimosExistentes(numeroOperacional);
+            #endregion
+
+            #region Print Resultado
+
             #endregion
 
         }

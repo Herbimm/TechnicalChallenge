@@ -8,16 +8,16 @@ namespace TechnicalChallenge.Domain.Entity
         /// <summary>
         /// Número digitado
         /// </summary>
-        public int Numero { get; set; }
+        public decimal Numero { get; set; }
         /// <summary>
         /// Lista com os numeros primos do Numero digitado
         /// </summary>
-        public List<int> NumerosPrimos { get; set; }   
+        public List<int> NumerosPrimos { get; set; } = new List<int>();
 
         /// <summary>
         /// Lista com os divisores do Numero digitado
         /// </summary>
-        public List<int> Divisores { get; set; }              
+        public List<int> Divisores { get; set; } = new List<int>();   
        
     }    
 }
