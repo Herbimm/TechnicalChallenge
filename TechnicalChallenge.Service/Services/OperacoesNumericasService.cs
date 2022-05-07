@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TechnicalChallenge.Domain.Entity;
 using TechnicalChallenge.Domain.Interface;
 
-namespace TechnicalChallenge.Service.Implementation
+namespace TechnicalChallenge.Application.Services
 {
     public class OperacoesNumericasService : IOperacoesNumericasService
     {

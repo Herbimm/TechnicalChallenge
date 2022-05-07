@@ -9,15 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{069DC7C4-244
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechnicalChallenge.Domain", "TechnicalChallenge.Domain\TechnicalChallenge.Domain.csproj", "{14E560E0-0312-4308-9592-73E2A0224B8B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechnicalChallenge.Service", "TechnicalChallenge.Service\TechnicalChallenge.Service.csproj", "{43653DBB-7D9D-4DB4-A113-741058B693EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechnicalChallenge.Application", "TechnicalChallenge.Service\TechnicalChallenge.Application.csproj", "{43653DBB-7D9D-4DB4-A113-741058B693EF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechnicalChallenge.Infra", "TechnicalChallenge.Infra\TechnicalChallenge.Infra.csproj", "{B3B760DE-43B7-432B-9E71-EA8DA8CA6723}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechnicalChallenge.Test", "TechnicalChallenge.Test\TechnicalChallenge.Test.csproj", "{60BE2CEA-EB1D-469C-BB9E-2D69915E7E89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnicalChallenge.Api", "TechnicalChallenge.Api\TechnicalChallenge.Api.csproj", "{DDE3A9DF-EDBA-4CC5-A787-62CE77B378B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechnicalChallenge.Api", "TechnicalChallenge.Api\TechnicalChallenge.Api.csproj", "{DDE3A9DF-EDBA-4CC5-A787-62CE77B378B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnicalChallenge.Ioc", "TechnicalChallenge.Ioc\TechnicalChallenge.Ioc.csproj", "{33ABA3AA-BF85-4EF2-9E67-118695B82EEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechnicalChallenge.Ioc", "TechnicalChallenge.Ioc\TechnicalChallenge.Ioc.csproj", "{33ABA3AA-BF85-4EF2-9E67-118695B82EEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Linq;
 using System.Text.RegularExpressions;
+using TechnicalChallenge.Application.Services;
 using TechnicalChallenge.Domain.Entity;
 using TechnicalChallenge.Domain.Interface;
 using TechnicalChallenge.Infra.Utis;
-using TechnicalChallenge.Service.Implementation;
+
 
 namespace TechnicalChallenge
 {
