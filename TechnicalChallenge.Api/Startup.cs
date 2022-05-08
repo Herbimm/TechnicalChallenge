@@ -8,7 +8,7 @@ using Microsoft.OpenApi.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using TechnicalChallenge.Domain.Filters;
+using TechnicalChallenge.Application.Filters;
 using TechnicalChallenge.Infra.Ioc;
 
 

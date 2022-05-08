@@ -1,6 +1,4 @@
-﻿
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using TechnicalChallenge.Application.OperacoesNumericas.Queries;
 
