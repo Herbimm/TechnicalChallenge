@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System;
 using System.Collections.Generic;
-using TechnicalChallenge.Application.Common.Exceptions;
 using TechnicalChallenge.Application.Common.Models;
+using TechnicalChallenge.Domain.Exceptions;
 
 namespace TechnicalChallenge.Domain.Filters
 {

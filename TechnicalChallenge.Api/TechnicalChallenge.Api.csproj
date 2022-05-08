@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TechnicalChallenge.Domain\TechnicalChallenge.Domain.csproj" />
     <ProjectReference Include="..\TechnicalChallenge.Ioc\TechnicalChallenge.Infra.Ioc.csproj" />
   </ItemGroup>
 

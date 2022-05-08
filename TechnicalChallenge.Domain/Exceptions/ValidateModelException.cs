@@ -2,7 +2,7 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace TechnicalChallenge.Application.Common.Exceptions
+namespace TechnicalChallenge.Domain.Exceptions
 {
     public  class ValidateModelException : ModelStateDictionary
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TechnicalChallenge.Application.Common.Exceptions
+namespace TechnicalChallenge.Domain.Exceptions
 {
     public class NotFoundException : Exception
     {

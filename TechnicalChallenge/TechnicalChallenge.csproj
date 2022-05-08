@@ -12,9 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TechnicalChallenge.Domain\TechnicalChallenge.Domain.csproj" />
     <ProjectReference Include="..\TechnicalChallenge.Infra\TechnicalChallenge.Infra.Data.csproj" />
-    <ProjectReference Include="..\TechnicalChallenge.Service\TechnicalChallenge.Application.csproj" />
   </ItemGroup>
 
 </Project>
