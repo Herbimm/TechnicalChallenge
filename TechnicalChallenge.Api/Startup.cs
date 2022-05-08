@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using TechnicalChallenge.Application.Filters;
+using TechnicalChallenge.Application.OperacoesNumericas.Queries;
 using TechnicalChallenge.Infra.Ioc;
 
 
@@ -28,11 +29,10 @@ namespace TechnicalChallenge.Api
         {
             
 
-            services.AddInfrastructure(Configuration);
-            services.AddControllers();
+            services.AddInfrastructure(Configuration);            
             services.AddControllers(options =>
             options.Filters.Add<ApiExceptionFilterAttribute>())
-                .AddFluentValidation();
+                .AddFluentValidation(config => config.RegisterValidatorsFromAssemblyContaining<DivisoresEPrimosValidator>());
             #region Swagger
             services.AddSwaggerGen(c =>
             {

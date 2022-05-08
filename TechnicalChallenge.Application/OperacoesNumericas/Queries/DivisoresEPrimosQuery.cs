@@ -31,8 +31,10 @@ namespace TechnicalChallenge.Application.OperacoesNumericas.Queries
             try
             {
                 var numero = _mapper.Map<NumeroOperacional>(request);
+                var divisores = _operacoesNumericasService.VerificarNumeroDivisores(numero);
+                var primos = _operacoesNumericasService.VerificaNumerosPrimosExistentes(numero);                
 
-                return ServiceResult.Success(new NumeroOperacional());
+                return ServiceResult.Success(numero);
             }
             catch (Exception)
             {

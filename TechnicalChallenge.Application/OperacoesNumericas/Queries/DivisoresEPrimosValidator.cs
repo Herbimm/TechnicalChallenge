@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace TechnicalChallenge.Application.OperacoesNumericas.Queries
 {
@@ -11,10 +12,11 @@ namespace TechnicalChallenge.Application.OperacoesNumericas.Queries
          .NotNull()
          .NotEmpty().WithMessage("O número esta vazio");
 
-            RuleFor(x => x.Numero).Must((query, x) => ValidarNumero(x)).WithMessage("Numero invalido");
+            RuleFor(v => v.Numero)
+               .MustAsync((command, x, cancellation) => ValidarNumero(x)).WithMessage("Número invalido");
         }
 
-        private bool ValidarNumero(decimal numero)
+        private async Task<bool> ValidarNumero(decimal numero)
         {
             var regex = new Regex("^[0-9]+$");
             if (!regex.IsMatch(numero.ToString()))

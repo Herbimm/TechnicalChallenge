@@ -39,8 +39,9 @@ namespace TechnicalChallenge.Application.Services
                 numeroOperacional.NumerosPrimos.Add(2);
                 return numeroOperacional.NumerosPrimos;
             }
-            return RetornaNumerosPrimos(numeroOperacional.Numero);
-            
+            var primos = RetornaNumerosPrimos(numeroOperacional.Numero);
+            numeroOperacional.NumerosPrimos = primos;
+            return numeroOperacional.NumerosPrimos;
         }
 
         private List<int> RetornaNumerosPrimos(decimal numero)

@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Reflection;
 using TechnicalChallenge.Application.Common;
+using TechnicalChallenge.Application.Common.Behavious;
 using TechnicalChallenge.Application.Services;
 using TechnicalChallenge.Domain.Interface;
 
@@ -26,16 +27,16 @@ namespace TechnicalChallenge.Infra.Ioc
             services.AddSingleton(mapper);
             #endregion
 
-
             #region Service
-            services.AddAutoMapper(Assembly.GetExecutingAssembly());
-            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());               
             services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddTransient<IOperacoesNumericasService, OperacoesNumericasService>();
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
             #endregion
 
             #region Repository
-            
+
             #endregion
 
             var myhandlers = AppDomain.CurrentDomain.Load("TechnicalChallenge.Application");
