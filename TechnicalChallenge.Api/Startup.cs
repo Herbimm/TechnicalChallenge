@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -7,6 +8,7 @@ using Microsoft.OpenApi.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using TechnicalChallenge.Domain.Filters;
 using TechnicalChallenge.Infra.Ioc;
 
 
@@ -24,9 +26,13 @@ namespace TechnicalChallenge.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+
             services.AddInfrastructure(Configuration);
             services.AddControllers();
-
+            services.AddControllers(options =>
+            options.Filters.Add<ApiExceptionFilterAttribute>())
+                .AddFluentValidation();
             #region Swagger
             services.AddSwaggerGen(c =>
             {
@@ -69,6 +75,9 @@ namespace TechnicalChallenge.Api
                  });
             });
             #endregion
+
+          
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

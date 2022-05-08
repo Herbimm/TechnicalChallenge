@@ -1,20 +1,22 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.0.1" />
     <PackageReference Include="MediatR" Version="10.0.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TechnicalChallenge.Domain\TechnicalChallenge.Domain.csproj" />
+    <Folder Include="OperacoesNumericas\Commands\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="OperacoesNumericas\Commands\" />
+    <ProjectReference Include="..\TechnicalChallenge.Domain\TechnicalChallenge.Domain.csproj" />
   </ItemGroup>
 
 </Project>

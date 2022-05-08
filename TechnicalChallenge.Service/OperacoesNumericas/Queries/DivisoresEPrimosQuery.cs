@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using TechnicalChallenge.Application.Common;
@@ -17,21 +18,25 @@ namespace TechnicalChallenge.Application.OperacoesNumericas.Queries
     }
     public class DivisoresEPrimosQueryHandler : IRequestHandlerWrapper<DivisoresEPrimosQuery, NumeroOperacional>
     {
+        private readonly IMapper _mapper;
         private readonly IOperacoesNumericasService _operacoesNumericasService;
 
-        public DivisoresEPrimosQueryHandler(IOperacoesNumericasService operacoesNumericasService)
+        public DivisoresEPrimosQueryHandler(IOperacoesNumericasService operacoesNumericasService, IMapper mapper)
         {
+            _mapper = mapper;
             _operacoesNumericasService = operacoesNumericasService;
         }
         public async Task<ServiceResult<NumeroOperacional>> Handle(DivisoresEPrimosQuery request, CancellationToken cancellationToken)
         {
             try
             {
-                
+                var numero = _mapper.Map<NumeroOperacional>(request);
+
+                return ServiceResult.Success(new NumeroOperacional());
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                
+                return ServiceResult.Failed(new NumeroOperacional(),ServiceError.ValidationFormat);
             }
         }
 
