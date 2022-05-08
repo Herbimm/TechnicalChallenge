@@ -15,9 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechnicalChallenge.Api", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechnicalChallenge.Infra.Ioc", "TechnicalChallenge.Ioc\TechnicalChallenge.Infra.Ioc.csproj", "{33ABA3AA-BF85-4EF2-9E67-118695B82EEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnicalChallenge.Application", "TechnicalChallenge.Application\TechnicalChallenge.Application.csproj", "{00BA8B10-165C-4271-B8EF-C28C2FBDD54C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechnicalChallenge.Application", "TechnicalChallenge.Application\TechnicalChallenge.Application.csproj", "{00BA8B10-165C-4271-B8EF-C28C2FBDD54C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnicalChallenge.Domain", "TechnicalChallenge.Domain\TechnicalChallenge.Domain.csproj", "{2FA65FBD-CC37-468F-BE09-320586DC812F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechnicalChallenge.Domain", "TechnicalChallenge.Domain\TechnicalChallenge.Domain.csproj", "{2FA65FBD-CC37-468F-BE09-320586DC812F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
