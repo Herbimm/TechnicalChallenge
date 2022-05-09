@@ -9,42 +9,42 @@ using TechnicalChallenge.Infra.Data.Utis;
 namespace TechnicalChallenge
 {
     internal static class Program
-    {        
+    {
         static void Main(string[] args)
         {
             #region Configurações
-            
+
             var service = new ServiceCollection();
             ConfigureServices(service);
             var serviceProvider = service.BuildServiceProvider();
             var operacoesNumericasService = serviceProvider.GetService<IOperacoesNumericasService>();
             #endregion
 
-            #region Inicialização
+            #region Execução
             Console.WriteLine("Sistema de Decomposição numérico");
             Console.WriteLine("Favor digitar um número para sua decomposição");
-
             var numeroDigitado = Console.ReadLine();
             var regex = new Regex("^[0-9]+$");
-            while (!regex.IsMatch(numeroDigitado))
+            while (true)
             {
-                Console.Clear();
-                Console.WriteLine("Valor incorreto, Favor digitar um número inteiro.");
+                while (!regex.IsMatch(numeroDigitado))
+                {
+                    Console.Clear();
+                    Console.WriteLine("Valor incorreto, Favor digitar um número inteiro.");
+                    numeroDigitado = Console.ReadLine();
+                }
+
+                NumeroOperacional numeroOperacional = new NumeroOperacional { Numero = Convert.ToDecimal(numeroDigitado) };
+                numeroOperacional.Divisores = operacoesNumericasService.VerificarNumeroDivisores(numeroOperacional);
+                numeroOperacional.NumerosPrimos = operacoesNumericasService.VerificaNumerosPrimosExistentes(numeroOperacional);
+
+                ConsoleListPrint.PrintConsoleNumerosDivisiveis(numeroOperacional.Divisores);
+                ConsoleListPrint.PrintConsoleNumerosPrimos(numeroOperacional.NumerosPrimos);
+                Console.WriteLine("Digite um novo Valor: ");
                 numeroDigitado = Console.ReadLine();
+
             }
             #endregion
-
-            #region Regra Divisão
-            NumeroOperacional numeroOperacional = new NumeroOperacional { Numero = Convert.ToInt32(numeroDigitado)};
-            numeroOperacional.Divisores = operacoesNumericasService.VerificarNumeroDivisores(numeroOperacional);
-            numeroOperacional.NumerosPrimos = operacoesNumericasService.VerificaNumerosPrimosExistentes(numeroOperacional);
-            #endregion
-
-            #region Print Resultado
-            ConsoleListPrint.PrintConsoleNumerosDivisiveis(numeroOperacional.Divisores);
-            ConsoleListPrint.PrintConsoleNumerosPrimos(numeroOperacional.NumerosPrimos);            
-            #endregion
-
         }
 
         #region DependencyInjection
